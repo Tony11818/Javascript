@@ -10,17 +10,33 @@
   <meta name="description" content="javascript variables" />
   <meta name="keywords" content="just weird variables" />
   <script>
-    var fullName = “Aurelio Anslemo”
-    var birthDay = “02/24/1992”
-    window.onload = function() {
-      document.getElementById('name').innerHTML = '{fullName}';
+    // NAME AND BIRTHDAY
+    var fullName = "Aurelio Anslemo"
+    var birthDay = "02/24/1992"
+
+    //RANDOM NUMBERS
+    var numOne = 25
+    var numTwo = 63
+    var numThree = 777
+
+    function myResults(){
+      results = numOne - (numTwo/numThree);
+    }
+    window.onload = function(){
+      document.getElementById("name").innerHTML = fullName;
+      document.getElementById("birth").innerHTML = birthDay;
+      document.getElementById("explain").innerHTML = "The number above is the results of the following math problem: 24 - ( 63 / 777 )";
+      document.getElementById("calc").innerHTML = numOne - (numTwo/numThree);
     }
   </script>
 </head>
 
 <body>
-  <h1 id="name"></h1>
-
+  <h1 id="name"> text here </h1>
+  <p id="birth"></p>
+  <br>
+  <h2 id="calc"></h2>
+  <p id="explain"></p>
 
   <footer>
     <div id="validator">
