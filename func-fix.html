@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Function to Fix</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="dcterms.rightsHolder" content="Name of Copyright Holder" />
+<meta name="dcterms.dateCopyrighted" content="2012" />
+<meta name="description" content="A short description of the page" />
+<meta name="keywords" content="keywords describing this page, most search engines
+ignore this now due to abuse"/>
+<script>
+
+function setupStuff()
+{
+	var today = new Date();
+	var lastDay = new Date(today.getFullYear(), today.getMonth() +1, 0).getDate();
+
+	createMenu(1,lastDay,'Choose a Day','daymenu');
+  var thisYear = today.getFullYear();
+	var oldYear = thisYear -125;
+
+	createMenu(oldYear,thisYear,'Choose a Year','yearmenu');
+
+	createMenu(1,12,'Choose a Month','monthmenu');
+
+	createMenu(25,1000,'Choose a Number','numbermenu');
+}
+	// createMenu Function
+function createMenu(startNum, endNum, menuMsg, targetId)
+{
+
+	var strMsg = `<option value="">${menuMsg}</option>`;
+
+	var counter = startNum;
+	while ( counter <= endNum)
+	{
+		strMsg += '<option value="' + counter + '">' + counter + '</option>';
+		counter++;
+	}
+
+	document.getElementById(targetId).innerHTML = strMsg;
+}
+
+window.onload = setupStuff;
+
+</script>
+<style>
+
+h1 {
+  text-align: center;
+}
+
+form {
+        position: relative;
+        background-color: #D3D3D3;
+        box-shadow: 10px 10px 8px #020202;
+        border-color: #002bff;
+        border-radius: 2em;
+        border-style: solid;
+        border-width: .1em;
+	text-align: center;
+        width: 45% ;
+        height: 100%;
+        margin: auto;
+        padding: 3em;
+      }
+select {
+  width: 50%;
+}
+ #validator {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+</style>
+
+</head>
+<body>
+
+  <h1> Please select the following below! </h1>
+
+<form method="get" action="#">
+
+<select name="day" id="daymenu">
+</select>
+<br />
+<select name="year"  id="yearmenu">
+</select>
+<br />
+<select name="month" id="monthmenu">
+</select>
+<br />
+<select name="number" id="numbermenu">
+</select>
+
+</form>
+
+<div id="validator">
+<a href="http://validator.w3.org/nu/?doc=https://nbtl.mesacc.edu/anthony1/javascript/func-fix.html">
+<img width="75" src="images/HTML5_Logo_64.png" alt="W3C Button to test HTML 5 validation"></a>
+</div>
+</body>
+</html>
+

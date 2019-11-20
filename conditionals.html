@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Conditionals</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="dcterms.rightsHolder" content="Aurelio Anselmo" />
+<meta name="dcterms.dateCopyrighted" content="2019" />
+<meta name="description" content="Conditionals" />
+<meta name="keywords" content="keywords describing this page, most search engines
+ignore this now due to abuse"/>
+<script>
+  
+  
+
+window.onload = function() {
+
+  const totalSales = 621
+  let disc = 0
+  
+  if (totalSales < 100) 
+  {
+    let discAmount = "$" + (totalSales * disc).toFixed(2);
+    let finalAmount = "$" + (totalSales - (totalSales * disc)).toFixed(2);
+    document.getElementById('sales').innerHTML=`Total Sales: ${totalSales}`;
+    document.getElementById('percentoff').innerHTML=`Discount Percentage: No Discount`;
+    document.getElementById('amount').innerHTML=`Discount amount: ${discAmount}`;
+    document.getElementById('final').innerHTML=`Final Price: ${finalAmount}`;
+  }
+  else if (totalSales < 400) 
+  {
+    disc = .10
+    let discAmount = "$" + (totalSales * disc).toFixed(2);
+    let finalAmount = "$" + (totalSales - (totalSales * disc)).toFixed(2);
+    document.getElementById('sales').innerHTML=`Total Sales: ${totalSales}`;
+    document.getElementById('percentoff').innerHTML=`Discount Percentage: 10%`;
+    document.getElementById('amount').innerHTML=`Discount amount: ${discAmount}`;
+    document.getElementById('final').innerHTML=`Final Price: ${finalAmount}`;
+  }
+  else if (totalSales <= 500) 
+  {
+    disc = .12
+    let discAmount = "$" + (totalSales * disc).toFixed(2);
+    let finalAmount = "$" + (totalSales - (totalSales * disc)).toFixed(2);
+    document.getElementById('sales').innerHTML=`Total Sales: ${totalSales}`;
+    document.getElementById('percentoff').innerHTML=`Discount Percentage: 12%`;
+    document.getElementById('amount').innerHTML=`Discount amount: ${discAmount}`;
+    document.getElementById('final').innerHTML=`Final Price: ${finalAmount}`;
+  }
+  else 
+  {
+    disc = .14
+    let discAmount = "$" + (totalSales * disc).toFixed(2);
+    let finalAmount = "$" + (totalSales - (totalSales * disc)).toFixed(2);
+    document.getElementById('sales').innerHTML=`Total Sales: ${totalSales}`;
+    document.getElementById('percentoff').innerHTML=`Discount Percentage: 14%`;
+    document.getElementById('amount').innerHTML=`Discount amount: ${discAmount}`;
+    document.getElementById('final').innerHTML=`Final Price: ${finalAmount}`;
+  }
+}
+  
+</script>
+
+<style>
+    #container {
+        position: relative;
+        background-color: #D3D3D3;
+        box-shadow: 10px 10px 8px #020202;
+        border-color: #002bff;
+        border-radius: 2em;
+        border-style: solid;
+        border-width: .1em;
+	text-align: center;
+        width: 75% ;
+        height: 100%;
+        margin: auto;
+        padding: 3em;
+      }
+    #validator {
+      text-align: center;
+      margin-top: 15px;
+    }
+</style>
+
+
+</head>
+<body>
+  <div id='container'>
+  <p id='sales'> text1 </p>
+  <p id='percentoff'> text2</p>
+  <p id='amount'> text3 </p>
+  <p id='final'> text4</p>
+  </div>
+<div id="validator">
+<a href="http://validator.w3.org/nu/?doc=https://nbtl.mesacc.edu/anthony1/javascript/conditionals.html">
+<img width="75" src="images/HTML5_Logo_64.png" alt="W3C Button to test HTML 5 validation"></a>
+</div>
+</body>
+</html>
