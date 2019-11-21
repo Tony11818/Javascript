@@ -25,9 +25,9 @@ ignore this now due to abuse" />
     </header>
     <div class="form-box">
       <form method="get" action="#">
-        <label for="firstname">First name: </label> <input id="firstname" type="text" name="firstname"><br><br>
-        <label for="password">New Password: </label> <input id="password" type="password" name="password"><br><br>
-        <label for="age">Quantity: </label> <input type="number" name="age" min="1" id="quantity" value="1"><br><br>
+        <label for="firstname">First name: </label> <input id="firstname" type="text" name="firstname"><span id="firstnameErr">REQUIRED</span><br><br>
+        <label for="password">New Password: </label> <input id="password" type="password" name="password"><span id="passwordErr"></span><br><br>
+        <label for="age">Quantity: </label> <input type="text" name="quantity" id="quantity"><span id="quantityErr"></span><br><br>
         <input type="checkbox" name="smoke" id="smoke">
         <label for="smoke">I Currently Smoke </label><br>
         <input type="checkbox" name="drink" id="drink" checked="checked">
@@ -60,7 +60,7 @@ ignore this now due to abuse" />
         </div>
 
         <div>
-          <p><strong>Select your goal for your health journey. You may control-click (Windows) or command-click (Mac) to select more than one.</strong></p>
+          <p><strong>Select your goal for your health journey.</strong></p>
           <select multiple size="6">
             <option value="muscle">Build muscle</option>
             <option value="weight-loss">Lose Weight</option>
