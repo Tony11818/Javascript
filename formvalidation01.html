@@ -13,9 +13,11 @@ ignore this now due to abuse" />
 
   <script src="formvalidation.js">
   </script>
-  <scrip type="text/javascript">
-    window.onload = setupEvents;
-    </script>
+
+  <script>
+		window.onload = setupevents;
+	</script>
+
 </head>
 
 <body>
@@ -25,39 +27,44 @@ ignore this now due to abuse" />
     </header>
     <div class="form-box">
       <form method="get" action="#">
-        <label for="firstname">First name: </label> <input id="firstname" type="text" name="firstname"><span id="firstnameErr">REQUIRED</span><br><br>
-        <label for="password">New Password: </label> <input id="password" type="password" name="password"><span id="passwordErr"></span><br><br>
-        <label for="age">Quantity: </label> <input type="text" name="quantity" id="quantity"><span id="quantityErr"></span><br><br>
-        <input type="checkbox" name="smoke" id="smoke">
-        <label for="smoke">I Currently Smoke </label><br>
-        <input type="checkbox" name="drink" id="drink" checked="checked">
-        <label for="drink">I Currently Drink Alcohol </label><br><br>
-        <fieldset>
+
+        <label for="firstname">First name: </label>
+        <input id="firstname" type="text" name="firstname">
+        <span id="firstnameErr">REQUIRED</span><br><br>
+
+        <label for="quantity">Quantity: </label>
+        <input type="text" name="quantity" id="quantity">
+        <span id="quantityErr"></span><br><br>
+
+        <label for="password">New Password: </label>
+        <input id="password" type="password" name="password">
+        <span id="passwordErr"></span><br><br>
+
+        <label for="selectage">Age: </label><br>
+        <select name="selectage" id="selectage"></select>
+        <span id="selectageErr"></span><br><br>
+
+        <fieldset id="life-style">
           <legend>Please select your active LifeStyle</legend>
-          <input type="radio" name="work-style" id="sedentary" value="sedentary">
-          <label for="sedentary">Sedentary </label><br>
-          <input type="radio" name="work-style" id="lightly-active" value="lightly-active">
-          <label for="lightly-active">Lightly Active </label><br>
-          <input type="radio" name="work-style" id="moderately-active" value="moderately-active">
-          <label for="moderately-active">Moderately Active </label><br>
-          <input type="radio" name="work-style" id="very-active" value="very-active">
-          <label for="very-active">Very Active </label><br>
-          <input type="radio" name="work-style" id="extra-active" value="extra-active">
-          <label for="extra-active">Extra Active </label><br>
-          <input type="radio" name="work-style" id="idk" value="idk">
-          <label for="idk">I Don't Know </label><br><br>
+          <span id="life-styleErr"> </span>
+          <input type="radio" name="life-style" value="sedentary">Sedentary</input><br>
+          <input type="radio" name="life-style" value="lightly-active">Lightly Active</input><br>
+          <input type="radio" name="life-style" value="moderately-active">Moderately Active</input><br>
+          <input type="radio" name="life-style" value="very-active">Very Active</input><br>
+          <input type="radio" name="life-style" value="extra-active">Extra Active</input><br>
+          <input type="radio" name="life-style" value="idk">I Don't Know</input><br><br>
         </fieldset>
-        <div class="drop-down">
-          <label for="workout"> Type of workout routine do you want: </label>
-          <select id="workout" name="workout">
-            <option value="anaerobic">Anaerobic</option>
-            <option value="aerobic">Aerobic</option>
-            <option value="sports">Sports</option>
-            <option value="weight-training">Weight Training</option>
-            <option value="calisthenics">Calisthenics</option>
-            <option value="power-lifting">Power Lifting</option>
-          </select>
-        </div>
+
+        <fieldset id="workout">
+          <legend>What type of workout routine do you want?</legend>
+          <span id="workoutErr"> </span>
+          <input type="radio" name="workout" value="anaerobic">Anaerobic</input><br>
+          <input type="radio" name="workout" value="aerobic">Aerobic</input><br>
+          <input type="radio" name="workout" value="sports">Sports</input><br>
+          <input type="radio" name="workout" value="weight-training">Weight Training</input><br>
+          <input type="radio" name="workout" value="calisthenics">Calisthenics</input><br>
+          <input type="radio" name="workout" value="power-lifting">Power Lifting</input><br>
+        </fieldset>
 
         <div>
           <p><strong>Select your goal for your health journey.</strong></p>
