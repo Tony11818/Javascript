@@ -15,7 +15,7 @@ ignore this now due to abuse" />
   </script>
 
   <script>
-		window.onload = setupevents;
+		window.onload = setupEvents;
 	</script>
 
 </head>
@@ -26,75 +26,78 @@ ignore this now due to abuse" />
       <h1>What Is Your Health Like?</h1>
     </header>
     <div class="form-box">
-      <form method="get" action="#">
+      <form method="get" id="form" action="#">
 
+        <!--  name field (text)  -->
         <label for="firstname">First name: </label>
         <input id="firstname" type="text" name="firstname">
-        <span id="firstnameErr">REQUIRED</span><br><br>
+        <span id="firstnameErr" style="color: red;"></span><br><br>
 
+        <!--  quantity(text)  -->
         <label for="quantity">Quantity: </label>
-        <input type="text" name="quantity" id="quantity">
-        <span id="quantityErr"></span><br><br>
+        <input id="quantity" type="text" name="quantity">
+        <span id="quantityErr" style="color: red;"></span><br><br>
 
+        <!--  password  -->
         <label for="password">New Password: </label>
-        <input id="password" type="password" name="password">
-        <span id="passwordErr"></span><br><br>
+        <input id="password" type="password">
+        <span id="passwordErr" style="color: red;"></span><br><br>
 
-        <label for="selectage">Age: </label><br>
+
+        <!--  a select menu  -->
+        <label for="selectage">Age: </label>
         <select name="selectage" id="selectage"></select>
-        <span id="selectageErr"></span><br><br>
+        <span id="selectageErr" style="color: red;"></span><br><br>
 
+        <!--  two sets of radio buttons  -->
         <fieldset id="life-style">
           <legend>Please select your active LifeStyle</legend>
-          <span id="life-styleErr"> </span>
+          <span id="life-styleErr" style="color: red;"> </span><br>
           <input type="radio" name="life-style" value="sedentary">Sedentary</input><br>
           <input type="radio" name="life-style" value="lightly-active">Lightly Active</input><br>
           <input type="radio" name="life-style" value="moderately-active">Moderately Active</input><br>
           <input type="radio" name="life-style" value="very-active">Very Active</input><br>
           <input type="radio" name="life-style" value="extra-active">Extra Active</input><br>
           <input type="radio" name="life-style" value="idk">I Don't Know</input><br><br>
-        </fieldset>
+        </fieldset><br>
 
         <fieldset id="workout">
           <legend>What type of workout routine do you want?</legend>
-          <span id="workoutErr"> </span>
+          <span id="workoutErr" style="color: red;"> </span><br>
           <input type="radio" name="workout" value="anaerobic">Anaerobic</input><br>
           <input type="radio" name="workout" value="aerobic">Aerobic</input><br>
           <input type="radio" name="workout" value="sports">Sports</input><br>
           <input type="radio" name="workout" value="weight-training">Weight Training</input><br>
           <input type="radio" name="workout" value="calisthenics">Calisthenics</input><br>
           <input type="radio" name="workout" value="power-lifting">Power Lifting</input><br>
-        </fieldset>
+        </fieldset><br>
 
-        <div>
-          <p><strong>Select your goal for your health journey.</strong></p>
-          <select multiple size="6">
-            <option value="muscle">Build muscle</option>
-            <option value="weight-loss">Lose Weight</option>
-            <option value="strength">Increase Strength</option>
-            <option value="Endurance">Endurance</option>
-            <option value="weight-gain">Gain Healthy Weight</option>
-            <option value="Shredded">Get Shredded</option>
-          </select>
-        </div><br>
+        <!--  checkboxes  -->
+        <div id="checkBox">These two boxes need to be checked only if you're ready!</div><br>
+        <input type="checkbox" name="ready1" id="motivated">
+        <label for="motivated">I am MOTIVATED! </label><br>
+        <input type="checkbox" name="ready2" id="hard-work">
+        <label for="hard-work">I Am Ready To Work Hard! </label><br><br>
 
-        <input type="hidden" id="custId" name="custId" value="1">
-
+        <!--  textarea  -->
         <div>
           <label for="extra-info"> More Information </label> <br>
-          <textarea maxlength="300" name="extra-info" id="extra-info" placeholder="write down any other info you would like us to know about your goals (in 300 characters or less)"></textarea>
+          <textarea name="extra-info" id="extra-info" rows="10" cols="100" placeholder="write down any other info you would like us to know about your goals (in 500 characters or less)"></textarea>
+          <span id="extra-infoErr"> 500 characters remaining! </span>
         </div>
 
-        <div class="buttons">
-          <input type="reset" />
+        <!--  (and of course submit button)  -->
+        <div class="button" id="button">
           <input name="submit" value="submit" type="submit" />
         </div><br>
       </form>
+    </div>
 
-      <div id="validator">
-        <a href="http://validator.w3.org/nu/?doc=https://nbtl.mesacc.edu/anthony1/javascript/formvalidation01.html">
-          <img width="75" src="images/HTML5_Logo_64.png" alt="W3C Button to test HTML 5 validation"></a>
-      </div>
+    <!--  Validator  -->
+    <div id="validator">
+      <a href="http://validator.w3.org/nu/?doc=https://nbtl.mesacc.edu/anthony1/javascript/formvalidation01.html">
+        <img width="75" src="images/HTML5_Logo_64.png" alt="W3C Button to test HTML 5 validation"></a>
+    </div>
 </body>
 
 </html>
