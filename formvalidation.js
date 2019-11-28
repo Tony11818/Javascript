@@ -1,28 +1,3 @@
-// function checkLength(fieldId,msgId,maxLen,minLen)
-// {
-//     //minLen can be optional, so we need to check that and set a default
-//     if( typeof minLen == "undefined")
-//     {
-//         minLen = 1;
-//     }
-//     // We return a custom anonymous function so it can be used
-//     //as an event handler
-//     return function()
-//     {
-//         var errMsg = "Must be between " + minLen + " and " + maxLen + " characters long";
-//         if ( fid.value.length < minLen || fid.value.length > maxLen)
-//         {
-//             mid.innerHTML = errMsg;
-//         }
-//         else
-//         {
-//             mid.innerHTML = "OK";
-//         }
-//
-//     }
-//
-// }
-
 const checkName = () => {
 	let name = document.getElementById('firstname').value;
 	if(name.length===0) {
