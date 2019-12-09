@@ -40,7 +40,7 @@ function yearparse(jsonString)
                       <td>${myArr[i].title}</td>
                       <td>${myArr[i].year}</td>
                       <td>${myArr[i].publisher}</td>
-                      <td>${myArr[i].isbn}</td>
+                      <td>${myArr[i].isbn13}</td>
                     </tr>`;
 
     }
