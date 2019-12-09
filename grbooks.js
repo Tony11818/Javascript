@@ -38,9 +38,9 @@ function yearparse(jsonString)
     {
         jsonMsg += `<tr>
                       <td>${myArr[i].title}</td>
-                      <td>myArr[i].year</td>
-                      <td>myArr[i].publisher</td>
-                      <td>myArr[i].isbn</td>
+                      <td>${myArr[i].year}</td>
+                      <td>${myArr[i].publisher}</td>
+                      <td>${myArr[i].isbn}</td>
                     </tr>`;
 
     }
