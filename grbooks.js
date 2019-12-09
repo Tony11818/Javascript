@@ -3,9 +3,9 @@ function ajaxfunction(command,sourceID,targetID,useJSON)
     return function()
     {
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() 
+        xmlhttp.onreadystatechange = function()
         {
-            if (this.readyState == 4 && this.status == 200) 
+            if (this.readyState == 4 && this.status == 200)
             {
                 if(useJSON == "yes")
                 {
@@ -21,20 +21,32 @@ function ajaxfunction(command,sourceID,targetID,useJSON)
         charstyped = encodeURIComponent(document.getElementById(sourceID).value);
         xmlhttp.open("GET", "https://www.lampbusters.com/coperni/javascript2/grbooks_ajax.php?command=" + command + "&searchterm=" + charstyped, true);
         xmlhttp.send();
-    }   
+    }
 }
 
 function yearparse(jsonString)
 {
     var myArr = JSON.parse(jsonString);
-                    var jsonMsg = "Json List of Titles <br />";
-                    for (var i=0,len = myArr.length; i < len; i++)
-                    {
-                        jsonMsg = jsonMsg + myArr[i].title + ',' + myArr[i].year + '<br />';
-                    
-                    }
-                    return jsonMsg;
-	
+    var jsonMsg = `<table>
+                    <tr>
+                      <th>Book Title</th>
+                      <th>Year</th>
+                      <th>Publisher</th>
+                      <th>ISBN 13</th>
+                    </tr>`;
+    for (var i=0,len = myArr.length; i < len; i++)
+    {
+        jsonMsg += `<tr>
+                      <td>${myArr[i].title}</td>
+                      <td>myArr[i].year</td>
+                      <td>myArr[i].publisher</td>
+                      <td>myArr[i].isbn</td>
+                    </tr>`;
+
+    }
+    jsonMsg += `</table>`;
+    return jsonMsg;
+
 }
 
 window.onload = setupEvents;
