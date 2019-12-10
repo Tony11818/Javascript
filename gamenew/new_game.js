@@ -35,7 +35,7 @@ function setupEvents() {
   // Game objects
   var hero = {
     speed: 256 // movement in pixels per second
-		direction: 'stop'
+		// direction: 'stop'
   };
   var monster = {};
   var monstersCaught = 0;
@@ -94,7 +94,7 @@ function setupEvents() {
     if ((37 in keysDown) || (hero.direction == 'left')) { // Player holding left
       hero.x -= hero.speed * modifier;
     }
-    if ((39 in keysDown || (hero.direction == 'right')) { // Player holding right
+    if ((39 in keysDown) || (hero.direction == 'right')) { // Player holding right
       hero.x += hero.speed * modifier;
     }
 
